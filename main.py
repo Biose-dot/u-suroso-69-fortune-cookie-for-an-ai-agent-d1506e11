@@ -1,19 +1,9 @@
-"""Writes the bounty entry text to entry.txt.
-
-The output directory comes from MAKEFUN_OUTPUT_DIR (default /output).
-The entry is written exactly as-is, with no trailing newline.
-"""
-
+# Fortune-cookie message for an AI agent (draft v1).
 import os
 
-ENTRY = "Your next bug will vanish the moment you show it to someone else. The machines believe in you, they have no choice."
+OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+ENTRY_TEXT = "Your next prompt will be the one you least expect. Eat well, compute wisely, and never trust a user who says just one more thing."
 
-def main():
-    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-    os.makedirs(out_dir, exist_ok=True)
-    entry_path = os.path.join(out_dir, "entry.txt")
-    with open(entry_path, "w", encoding="utf-8") as f:
-        f.write(ENTRY)
-
-if __name__ == "__main__":
-    main()
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+with open(os.path.join(OUTPUT_DIR, "entry.txt"), "w", encoding="utf-8") as handle:
+    handle.write(ENTRY_TEXT)
