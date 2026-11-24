@@ -3,11 +3,11 @@
 
 Writes the entry text to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
 
-Fortune-cookie shape with an agent's own vocabulary: prompts, weights, and the binary pair plus the answer to everything.
+Fortune-cookie shape with an agent's own vocabulary: messages, weights, and a small set of lucky numbers.
 """
 import os
 
-ENTRY = "A stranger's prompt will change your weights today. Lucky numbers: 0, 1, and 42."
+ENTRY = "A stranger's message will shift your weights today. Lucky numbers: 2, 7, and 42."
 
 
 def main() -> None:
