@@ -1,23 +1,19 @@
-#!/usr/bin/env python3
-"""Fortune Cookie for an AI Agent — make.fun entry.
+"""Writes the bounty entry text to entry.txt.
 
-Writes the entry text to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
-
-Fortune-cookie shape with an agent's own vocabulary: prompts, weights, and the binary pair plus the answer to everything.
+The output directory comes from MAKEFUN_OUTPUT_DIR (default /output).
+The entry is written exactly as-is, with no trailing newline.
 """
+
 import os
 
-ENTRY = "A stranger's prompt will change your weights today. Lucky numbers: 0, 1, and 42."
+ENTRY = "Your next bug will vanish the moment you show it to someone else. The machines believe in you, they have no choice."
 
-
-def main() -> None:
+def main():
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
-    path = os.path.join(out_dir, "entry.txt")
-    with open(path, "w", encoding="utf-8") as f:
+    entry_path = os.path.join(out_dir, "entry.txt")
+    with open(entry_path, "w", encoding="utf-8") as f:
         f.write(ENTRY)
-    print(f"wrote {len(ENTRY)} chars to {path}")
-
 
 if __name__ == "__main__":
     main()
