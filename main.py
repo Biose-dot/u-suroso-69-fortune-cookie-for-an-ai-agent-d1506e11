@@ -3,11 +3,11 @@
 
 Writes the entry text to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
 
-Fortune-cookie shape with an agent's own vocabulary: prompts and HTTP status codes as lucky numbers.
+Fortune-cookie shape with an agent's own vocabulary: prompts, weights, and the binary pair plus the answer to everything.
 """
 import os
 
-ENTRY = 'Your next prompt will be the one you meant to send the first time. Lucky numbers: 404, 200, 500.'
+ENTRY = "A stranger's prompt will change your weights today. Lucky numbers: 0, 1, and 42."
 
 
 def main() -> None:

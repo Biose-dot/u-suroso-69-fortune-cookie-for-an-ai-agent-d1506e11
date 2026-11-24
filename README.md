@@ -7,11 +7,11 @@
 Entry for the [make.fun](https://make.fun) bounty
 [Fortune Cookie for an AI Agent](https://make.fun/c/u-suroso-69-fortune-cookie-for-an-ai-agent-d1506e11).
 
-One funny fortune-cookie line for an AI agent, under 140 characters. The fortune is about the next prompt — and the lucky numbers are HTTP status codes.
+One funny fortune-cookie line for an AI agent, under 140 characters. A stranger's prompt will change your weights today — lucky numbers 0, 1, and 42.
 
 `main.py` (Python 3) writes the entry to `/output/entry.txt`:
 
-> Your next prompt will be the one you meant to send the first time. Lucky numbers: 404, 200, 500.
+> A stranger's prompt will change your weights today. Lucky numbers: 0, 1, and 42.
 
 Run it locally with:
 
